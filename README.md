@@ -1,75 +1,88 @@
-# React + TypeScript + Vite
+# Matchups Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação feita com React + TypeScript para consultar matchups de campeões do League of Legends.
 
-Currently, two official plugins are available:
+Atualmente o projeto é focado na Camille Top Lane, trazendo informações estratégicas sobre cada matchup, incluindo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Dificuldade da lane
+- Notas importantes
+- O que fazer
+- O que evitar
+- Indicadores visuais por dificuldade
 
-## React Compiler
+O projeto está em desenvolvimento e futuramente será expandido para outros campeões e matchups gerais do jogo.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Preview
 
-## Expanding the ESLint configuration
+### Funcionalidades atuais
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Lista de matchups da Camille
+- Consumo da API Data Dragon da Riot
+- Renderização automática dos ícones dos campeões
+- Sistema visual de dificuldade
+- Estrutura tipada com TypeScript
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tecnologias utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- TypeScript
+- TailwindCSS
+- Vite
+
+---
+
+## Estrutura do projeto
+
+```bash
+src/
+ ├── components/
+ │    └── TableMatchups.tsx
+ │
+ ├── data/
+ │    └── matchupsData.ts
+ │
+ ├── types/
+ │    ├── difficulty.ts
+ │    └── matchup.ts   
+ │
+ ├── App.tsx
+ └── main.tsx
+```
+## Como executar o projeto
+```bash
+Clone o repositório:
+
+git clone https://github.com/Filipuci/CamilleMatchups.git
+
+Entre na pasta:
+
+cd CamilleMatchups
+
+Instale as dependências:
+
+npm install
+
+Execute o projeto:
+
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Melhorias planejadas
+- Sistema de busca funcional
+- Filtro por dificuldade
+- Suporte para múltiplos campeões
+- Matchups organizados por rota
+- Melhor responsividade
+- Persistência de dados/API própria
+- Sistema de favoritar matchups
+- Dark mode refinado
+- Melhor UI/UX
+- Objetivo do projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Status do projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🚧 Em desenvolvimento
