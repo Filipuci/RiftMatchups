@@ -1,4 +1,4 @@
-import type { difficulty } from "../data/difficulty"
+import type { difficulty } from "./difficulty"
 
 export type Matchup = {
   championName: string,

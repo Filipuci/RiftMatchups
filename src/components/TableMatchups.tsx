@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import type { difficulty } from "../data/difficulty"
 import { matchupsData } from "../data/matchupsData"
+import type { difficulty } from "../types/difficulty"
 
 export const TableMatchups = () => {
   const difficultyBorder: Record<difficulty, string> = {

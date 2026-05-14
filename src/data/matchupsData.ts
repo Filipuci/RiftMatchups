@@ -1,4 +1,5 @@
-import type { Matchup } from "../types/matchup"
+import type { Matchup } from "../types/Matchup";
+
 
 export const matchupsData: Matchup[] = [
   {
