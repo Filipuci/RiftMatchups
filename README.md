@@ -56,11 +56,11 @@ src/
 ```bash
 Clone o repositório:
 
-git clone https://github.com/Filipuci/CamilleMatchups.git
+git clone https://github.com/Filipuci/RiftMatchups.git
 
 Entre na pasta:
 
-cd CamilleMatchups
+cd RiftMatchups
 
 Instale as dependências:
 
